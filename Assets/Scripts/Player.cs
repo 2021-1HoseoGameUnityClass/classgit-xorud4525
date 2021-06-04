@@ -77,13 +77,24 @@ public class Player : MonoBehaviour
             GetComponent<Animator>().SetBool("Jump", false);
             isJump = false;
         }
+        if (collision.collider.tag == "Enemy")
+        {
+            DetaManager.instance.playerHP -= 1;
+            if(DetaManager.instance.playerHP<0)
+            {
+                DetaManager.instance.playerHP = 0;
+            }
+
+            UiManager.instance.PlayerHP();
+        }
     }
     private void Fire()
     {
+        AudioClip audioClip = Resources.Load<AudioClip>("RangedAttack") as AudioClip;
+        GetComponent<AudioSource>().clip = audioClip;
         GetComponent<AudioSource>().Play();
         float direction = transform.localScale.x;
         Quaternion quaternion = new Quaternion(0, 0, 0, 0);
         Instantiate(bulletObj,bulletPos.transform.position,quaternion).GetComponent<Bullet>().InstantiateBullet(direction);
     }
 }
-   

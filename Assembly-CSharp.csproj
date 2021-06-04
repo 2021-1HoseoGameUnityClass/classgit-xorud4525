@@ -59,6 +59,11 @@
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\camera.cs" />
+    <Compile Include="Assets\Scripts\pad.cs" />
+    <Compile Include="Assets\Scripts\DetaManager.cs" />
+    <Compile Include="Assets\Scripts\UiManager.cs" />
+    <Compile Include="Assets\Scripts\savedata.cs" />
     <None Include="Assets\Ludiq\Ludiq.Core\DotNetDocumentation\System.Web.Extensions.Design.xml" />
     <None Include="Assets\Ludiq\Ludiq.Core\DotNetDocumentation\Microsoft.Build.Engine.xml" />
     <None Include="Assets\Ludiq\Assemblies\Bolt.State.Runtime.xml" />
